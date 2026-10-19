@@ -1,6 +1,9 @@
+#take input from user
 dna = input("Enter a DNA sequence: ").lower()
 count = dna.count("g") + dna.count("c")
+# Checks whether every character in the DNA sequence is A, T, G, or C.
 check = all(base in 'atgc' for base in dna)
+#calculate the GC%
 if check and len(dna) > 0:
     gc_percentage = count*100/len(dna)
     print("No of G:" , dna.count("g"))
