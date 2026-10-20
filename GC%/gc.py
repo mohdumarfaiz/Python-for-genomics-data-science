@@ -11,5 +11,8 @@ if check and len(dna) > 0:
     print(f"GC Percentage: {gc_percentage:.2f}%")
 elif 'n' in dna:
     print("DNA sequence contains undefined bases")
+    for i in range(len(dna)):
+        if dna[i] not in "atgc":
+            print("Undefined base position:", i+1)
 else:
     print("The Provided DNA sequence is incorrect (or) No DNA sequence is provided")
